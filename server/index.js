@@ -11,6 +11,9 @@ app.use('/public/images', express.static(path.join(__dirname + '/../dist/public/
 app.use('/fonts', express.static(path.join(__dirname + '/../dist/public/fonts')));
 app.get('/game.html', function(req, res){
 	res.sendfile(__dirname + '/game.html');
-})
+});
+app.get('/gameover.html', function(req, res){
+  res.sendfile(__dirname + '/gameover.html');
+});
 // Listen on port 1337
 app.listen(1337);

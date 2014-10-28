@@ -122,6 +122,8 @@ gulp.task('copystatic', function() {
     .pipe(gulp.dest('dist/public'));
   gulp.src(['client/bower_components/semantic/build/packaged/fonts/**.*'])
     .pipe(gulp.dest('dist/fonts'));
+  gulp.src(['client/js/*.js'])
+    .pipe(gulp.dest('dist/js'));
 });
 // Remove the dist folder
 gulp.task('cleanup', function() {
