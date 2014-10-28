@@ -73,7 +73,7 @@ var initializeRenderer = function(){
     precision: 'highp',
     preserveDrawingBuffer: true
   });
-  renderer.setSize(SCREEN_WIDTH * DPR, SCREEN_HEIGHT * DPR);
+  renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
   renderer.shadowMapEnabled = true;
   renderer.gammaInput = true;
   renderer.gammaOutput = true;
@@ -153,7 +153,7 @@ var initializeControls = function(){
   document.onmousemove = function (e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
-    player.position.set((mouseX - (SCREEN_WIDTH * DPR / 2)) * 0.25, (-(mouseY - (SCREEN_HEIGHT * DPR / 2))) * 0.25, player.position.z);
+    player.position.set((mouseX - (SCREEN_WIDTH / 2)) * 0.25, (-(mouseY - (SCREEN_HEIGHT / 2))) * 0.25, player.position.z);
     return true;
   };
 
